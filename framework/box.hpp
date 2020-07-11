@@ -10,6 +10,11 @@ public:
   Box(){};
   Box(glm::vec3 minPoint, glm::vec3 maxPoint)
     : minPoint_(minPoint), maxPoint_(maxPoint){};
+  Box(glm::vec3 minPoint, glm::vec3 maxPoint, std::string name, Color color) : Shape(name, color)
+  {
+    minPoint_ = minPoint;
+    maxPoint_ = maxPoint;
+  }
 
   float getSideLengthOf(float start, float end) const;
 

@@ -11,6 +11,11 @@ public:
   Sphere(){};
   Sphere(glm::vec3 center, float radius)
     : center_(center), radius_(radius){};
+  Sphere(glm::vec3 center, float radius, std::string name, Color color) : Shape(name, color)
+  {
+    center_ = center;
+    radius_ = radius;
+  }
 
   /* Warum müssen die Methoden in sphere.hpp und nicht
      sphere.cpp definiert werden? */
@@ -28,6 +33,7 @@ public:
 private:
   glm::vec3 center_{0.0f, 0.0f, 0.0f};
   float radius_ = 1.0f;
+
 };
 
 #endif //SPHERE_HPP

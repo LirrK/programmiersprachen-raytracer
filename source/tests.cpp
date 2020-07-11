@@ -40,6 +40,16 @@ TEST_CASE("Box area and volume functions", "[boxA+V]")
   REQUIRE(b4.volume() == Approx(1.0f));
 }
 
+// Vielleicht später, getter wären notwendig
+/*
+TEST_CASE("Correct constructors for inheritance", "[constructorInheritance]")
+{
+  Sphere s0({10.0f, 10.0f, 10.0f}, 5.0f, "sphäre 1", {0.2, 0.3, 0.4});
+
+  REQUIRE()
+}
+*/
+
 int main(int argc, char *argv[])
 {
   return Catch::Session().run(argc, argv);
