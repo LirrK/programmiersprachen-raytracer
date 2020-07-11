@@ -1,5 +1,8 @@
 Fragen:
 
-sphere.hpp
+-> sphere.hpp
   ->  Warum müssen die override Funktionen in der hpp definiert werden?
       Wenn sie in der hpp deklariert und in der cpp definiert werden kompiliert es nicht.
+
+-> Slides zu Klassenmechaniken?
+-> 

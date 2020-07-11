@@ -1,0 +1,10 @@
+Bei der Klassenhierarchie geht es um die Vererbung unter Klassen. Sie gibt also Auskunft, welche
+Objekte von anderen Objekten erben.
+
+Die Objekthierarchie beschreibt die Verbindungen zwischen den Instanzen zur Laufzeit des Programms.
+Aggregation: Objekt "is part of" eines anderes anderen Objektes
+Assoziation: Objekte existieren unabhängig voneinander, aber sie interagieren miteinander bzw.
+verweisen aufeinander (pointer).
+
+Aus einer Klassenhierarchie kann man ein Klassenmodel erstellen.
+Aus einer Objekthierarchie kann man ein Objektmodell erstellen.
