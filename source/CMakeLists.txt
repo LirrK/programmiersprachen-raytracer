@@ -21,6 +21,7 @@ add_executable(tests
   ../framework/shape.cpp
   ../framework/sphere.cpp
   ../framework/box.cpp
+  ../framework/color.hpp
   )
 target_link_libraries(tests
   ${GLFW_LIBRARIES}
