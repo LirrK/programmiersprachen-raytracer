@@ -17,19 +17,9 @@ public:
   }
 
   float getSideLengthOf(float start, float end) const;
+  float area() const override;
+  float volume() const override;
 
-  float area() const override {
-    float sideA = getSideLengthOf(minPoint_.x, maxPoint_.x);
-    float sideB = getSideLengthOf(minPoint_.y, maxPoint_.y);
-    float sideC = getSideLengthOf(minPoint_.z, maxPoint_.z);
-    return ((2*(sideA*sideB) + 2*(sideA*sideC) + 2*(sideA*sideC)));
-  }
-  float volume() const override {
-    float sideA = getSideLengthOf(minPoint_.x, maxPoint_.x);
-    float sideB = getSideLengthOf(minPoint_.y, maxPoint_.y);
-    float sideC = getSideLengthOf(minPoint_.z, maxPoint_.z);
-    return (sideA*sideB*sideC);
-  }
 private:
   glm::vec3 minPoint_{0.0f, 0.0f, 0.0f};
   glm::vec3 maxPoint_{1.0f, 1.0f, 1.0f};

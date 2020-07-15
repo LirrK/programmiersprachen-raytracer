@@ -5,4 +5,4 @@ Fragen:
       Wenn sie in der hpp deklariert und in der cpp definiert werden kompiliert es nicht.
 
 -> Slides zu Klassenmechaniken?
--> 
+-> wie soll print() funktionieren?
