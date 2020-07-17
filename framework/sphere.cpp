@@ -7,3 +7,14 @@ float Sphere::area() const {
 float Sphere::volume() const {
   return ((4.0f/3.0f)*(pow(radius_, 3))*M_PI);
 }
+
+std::ostream& Sphere::print(std::ostream& os) const {
+  Shape::print(os);
+  return os << "Center: [ " << center_.x << " , " << center_.y << " , "
+            << center_.z << " ]" << std::endl << "Radius: " << radius_
+            << std::endl;
+}
+
+std::ostream& operator<<(std::ostream& os, Sphere const& s) {
+  return s.print(os);
+}
