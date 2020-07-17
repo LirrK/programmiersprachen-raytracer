@@ -14,17 +14,14 @@ public:
 
   virtual float area() const = 0;
   virtual float volume() const = 0;
-  //virtual std::ostream& print(std::ostream& os) const; // TODO Implementation
+  virtual std::ostream& print(std::ostream& os) const;
 
 protected:
   std::string name_;
   Color color_{0.5f, 0.5f, 0.5f};
 };
 
-//std::ostream& operator<<(std::ostream& os, Shape const& s)
-//{
-  // TODO Implementation
-  // wirklich in die hpp implementieren?
-//}
+std::ostream& operator<<(std::ostream& os, Shape const& s);
+
 
 #endif //SHAPE_HPP
