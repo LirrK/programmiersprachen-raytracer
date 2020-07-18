@@ -19,7 +19,7 @@ public:
   float getSideLengthOf(float start, float end) const;
   float area() const override;
   float volume() const override;
-  virtual std::ostream& print(std::ostream& os) const;
+  std::ostream& print(std::ostream& os) const override;
 
 
 private:

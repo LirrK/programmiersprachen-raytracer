@@ -53,9 +53,9 @@ TEST_CASE("Correct constructors for inheritance", "[constructorInheritance]")
 int main(int argc, char *argv[])
 {
   Sphere sphere1{{1.0f, 1.0f, 1.0f}, 10.0f, "spherePrintedWithFunction", {0.2f, 0.3f, 0.4f}};
-  Sphere sphere2{{1.0f, 1.0f, 1.0f}, 10.0f, "spherePrintedWithOperator", {0.6f, 0.7f, 0.8f}};
+  Sphere sphere2{{2.0f, 2.0f, 2.0f}, 20.0f, "spherePrintedWithOperator", {0.6f, 0.7f, 0.8f}};
   Box box1{{1.0f, 1.0f, 1.0f}, {2.0f, 2.0f, 2.0f}, "boxPrintedWithFunction", {0.2f, 0.3f, 0.4f}};
-  Box box2{{5.0f,5.0f,5.0f}, {6.0f, 6.0f, 6.0f}, "boxPrintedWithOperator", {0.6f, 0.7f, 0.8f}};
+  Box box2{{5.0f, 5.0f, 5.0f}, {6.0f, 6.0f, 6.0f}, "boxPrintedWithOperator", {0.6f, 0.7f, 0.8f}};
 
   sphere1.print(std::cout);
     std::cout << std::endl;

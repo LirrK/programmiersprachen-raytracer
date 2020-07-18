@@ -1,0 +1,11 @@
+Override:
+
+Bei korrektem Code kommt es zu keinen Problemen sollte man override weglassen.
+Override erfüllt aber folgende Funktionen:
+
+- erhöht Lesbarkeit
+  -> sofort klar, dass es sich um eine überschriebene Funktion einer Elternklasse handelt
+- verhindert Unachtsamkeitsfehler
+  -> wenn override fehlt, dann würde im Falle einer von der Elternfunktion unterschiedlichen
+     Funktionssignatur einfach eine normale, nicht überschreibende Funktion erstellt
+  -> Es fällt auf, wenn die Elternfunktion nicht virtuell getagt ist
