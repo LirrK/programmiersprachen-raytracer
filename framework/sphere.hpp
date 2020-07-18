@@ -23,7 +23,7 @@ public:
   float area() const override;
   float volume() const override;
   std::ostream& print(std::ostream& os) const override;
-  HitPoint& intersect(Ray const& ray);
+  //HitPoint& intersect(Ray const& ray);
   // warum muss der nicht nochmal in der hpp auftauchen? warum funktioniert das so?
   // std::ostream& operator<<(std::ostream& os, Sphere const& s) override;
 

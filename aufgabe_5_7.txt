@@ -1,0 +1,10 @@
+Statische Typen werden zur Übersetzungszeit festgelegt.
+Eine Variable erhält einen Typ und kann somit auch nur auf Daten
+zeigen, die von diesem Typ sind.
+
+Dynamische Typen können zur Laufzeit verändert werden.
+Die Variable ist ein Name, welcher während der Laufzeit auf unterschiedliche
+Werte unterschiedlichen Typs zeigen kann.
+
+s1: statischer Typ ist Shape. Dynamischer ist Sphere
+s2: statischer und Dynamischer Typ ist Shape
