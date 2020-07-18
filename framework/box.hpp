@@ -7,14 +7,17 @@
 class Box : public Shape
 {
 public:
-  Box(){};
+  Box(){std::cout << "Box created." << std::endl;};
   Box(glm::vec3 minPoint, glm::vec3 maxPoint)
-    : minPoint_(minPoint), maxPoint_(maxPoint){};
+    : minPoint_(minPoint), maxPoint_(maxPoint)
+    {std::cout << "Box created." << std::endl;};
   Box(glm::vec3 minPoint, glm::vec3 maxPoint, std::string name, Color color) : Shape(name, color)
   {
     minPoint_ = minPoint;
     maxPoint_ = maxPoint;
+    std::cout << "Box created." << std::endl;
   }
+  ~Box(){std::cout << "Box deleted." << std::endl;};
 
   float getSideLengthOf(float start, float end) const;
   float area() const override;

@@ -65,6 +65,49 @@ TEST_CASE("intersect_ray_sphere", "[intersect]")
   REQUIRE(distance == Approx(4.0f));
 }
 */
+
+TEST_CASE("Aufgabe 5.8", "[virtual]")
+{
+  std::cout << std::endl;
+  std::cout << "AUFGABE 5.8 -----------------------" << std::endl;
+  std::cout << std::endl;
+
+  Color red{255.0f, 0.0f, 0.0f};
+  glm::vec3 position{0.0f, 0.0f, 0.0f};
+
+  Sphere* s1 = new Sphere{position, 1.2f, "sphere0", red};
+  Sphere* s2 = new Sphere{position, 1.2f, "sphere1", red};
+
+  s1->print(std::cout);
+  s2->print(std::cout);
+
+  delete s1;
+  delete s2;
+
+  std::cout << std::endl;
+  std::cout << "ENDE AUFGABE 5.8 -----------------------" << std::endl;
+  std::cout << std::endl;
+
+  /*
+  With virtual:
+    Sphere deleted.
+    Shape deleted.
+    Sphere deleted.
+    Shape deleted.
+
+  Without virtual:
+    Sphere deleted.
+    Shape deleted.
+    Sphere deleted.
+    Shape deleted.
+
+  Auswertung:
+    Keine Ahnung warum beiden das gleiche passiert.
+    Eigetlich dürfte im Fall, dass ~Shape() nicht virtuell ist, der Sphere Destruktor nicht
+    aufgerufen werden. Der output müsste eigentlich 2x Shape deleted sein.
+  */
+}
+
 int main(int argc, char *argv[])
 {
   Sphere sphere1{{1.0f, 1.0f, 1.0f}, 10.0f, "spherePrintedWithFunction", {0.2f, 0.3f, 0.4f}};

@@ -11,14 +11,17 @@
 class Sphere : public Shape
 {
 public:
-  Sphere(){};
+  Sphere(){std::cout << "Sphere created." << std::endl;};
   Sphere(glm::vec3 center, float radius)
-    : center_(center), radius_(radius){};
+    : center_(center), radius_(radius)
+    {std::cout << "Sphere created." << std::endl;};
   Sphere(glm::vec3 center, float radius, std::string name, Color color) : Shape(name, color)
   {
     center_ = center;
     radius_ = radius;
+    std::cout << "Sphere created." << std::endl;
   }
+  ~Sphere(){std::cout << "Sphere deleted." << std::endl;};
 
   float area() const override;
   float volume() const override;

@@ -8,9 +8,11 @@
 class Shape
 {
 public:
-  Shape(){};
+  Shape(){std::cout << "Shape created." << std::endl;};
   Shape(std::string name, Color color)
-    : name_(name), color_(color) {};
+    : name_(name), color_(color) 
+    {std::cout << "Shape created." << std::endl;};
+  virtual ~Shape(){std::cout << "Shape deleted." << std::endl;};
 
   virtual float area() const = 0;
   virtual float volume() const = 0;
