@@ -2,8 +2,11 @@
 #define SPHERE_HPP
 
 #include <glm/vec3.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtx/intersect.hpp>
 #include "shape.hpp"
-
+#include "ray.hpp"
+#include "hitpoint.hpp"
 
 class Sphere : public Shape
 {
@@ -20,6 +23,7 @@ public:
   float area() const override;
   float volume() const override;
   std::ostream& print(std::ostream& os) const override;
+  HitPoint& intersect(Ray const& ray);
   // warum muss der nicht nochmal in der hpp auftauchen? warum funktioniert das so?
   // std::ostream& operator<<(std::ostream& os, Sphere const& s) override;
 

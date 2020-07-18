@@ -1,8 +1,11 @@
 #define CATCH_CONFIG_RUNNER
 #include <catch.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtx/intersect.hpp>
 #include "shape.hpp"
 #include "sphere.hpp"
 #include "box.hpp"
+#include "ray.hpp"
 
 TEST_CASE("Sphere area and volume functions", "[sphereA+V]")
 {
@@ -39,17 +42,29 @@ TEST_CASE("Box area and volume functions", "[boxA+V]")
   REQUIRE(b3.volume() == Approx(125.0f));
   REQUIRE(b4.volume() == Approx(1.0f));
 }
-
-// Vielleicht später, getter wären notwendig
 /*
-TEST_CASE("Correct constructors for inheritance", "[constructorInheritance]")
+TEST_CASE("intersect_ray_sphere", "[intersect]")
 {
-  Sphere s0({10.0f, 10.0f, 10.0f}, 5.0f, "sphäre 1", {0.2, 0.3, 0.4});
+  // Ray
+  glm::vec3 ray_origin{0.0f, 0.0f, 0.0f};
+  glm::vec3 ray_direction{0.0f, 0.0f, 1.0f};
+  Ray ray{ray_origin, ray_direction};
 
-  REQUIRE()
+  // Sphere
+  glm::vec3 sphere_center{0.0f, 0.0f, 5.0f};
+  float sphere_radius{1.0f};
+  Sphere sphere{sphere_center, sphere_radius};
+
+  float distance = 0.0f;
+  auto result = glm::intersectRaySphere(
+    ray.origin, ray.direction,
+    sphere_center,
+    sphere_radius * sphere_radius, //squared radius !!!
+    distance);
+  
+  REQUIRE(distance == Approx(4.0f));
 }
 */
-
 int main(int argc, char *argv[])
 {
   Sphere sphere1{{1.0f, 1.0f, 1.0f}, 10.0f, "spherePrintedWithFunction", {0.2f, 0.3f, 0.4f}};

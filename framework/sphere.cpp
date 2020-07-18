@@ -18,3 +18,8 @@ std::ostream& Sphere::print(std::ostream& os) const {
 std::ostream& operator<<(std::ostream& os, Sphere const& s) {
   return s.print(os);
 }
+/*
+HitPoint& Sphere::intersect(Ray const& ray) {
+  if( glm::intersectRaySphere(ray.origin, ray.direction, center_, radius_*radius_, ))
+}
+*/
