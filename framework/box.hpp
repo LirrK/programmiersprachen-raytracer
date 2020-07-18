@@ -19,6 +19,8 @@ public:
   float getSideLengthOf(float start, float end) const;
   float area() const override;
   float volume() const override;
+  virtual std::ostream& print(std::ostream& os) const;
+
 
 private:
   glm::vec3 minPoint_{0.0f, 0.0f, 0.0f};
