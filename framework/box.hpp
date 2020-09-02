@@ -11,7 +11,7 @@ public:
   Box(glm::vec3 minPoint, glm::vec3 maxPoint)
     : minPoint_(minPoint), maxPoint_(maxPoint)
     {std::cout << "Box created." << std::endl;};
-  Box(glm::vec3 minPoint, glm::vec3 maxPoint, std::string name, Color color) : Shape(name, color)
+  Box(glm::vec3 minPoint, glm::vec3 maxPoint, std::string name, Color color, Material material) : Shape(name, color, material) // , initialisierungsliste
   {
     minPoint_ = minPoint;
     maxPoint_ = maxPoint;
@@ -23,6 +23,7 @@ public:
   float area() const override;
   float volume() const override;
   std::ostream& print(std::ostream& os) const override;
+  //HitPoint intersect(Ray const& ray);
 
 
 private:

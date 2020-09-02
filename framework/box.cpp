@@ -29,3 +29,24 @@ std::ostream& Box::print(std::ostream& os) const {
 std::ostream& operator<<(std::ostream& os, Box const& s) {
   return s.print(os);
 }
+
+/*HitPoint intersect(Ray const& ray) {
+  HitPoint hitpoint;
+  hitpoint.distance = 0.0f;
+  hitpoint.nameOfObjectHit = "empty";
+  hitpoint.colorOfObjectHit
+  return hitpoint;
+
+  HitPoint hitpoint;
+  Ray norm;
+  norm.direction = {0.0f, 0.0f, 0.1f};
+  float distance = 0.0f;
+
+  hitpoint.nameOfObjectHit = "empty";
+  hitpoint.colorOfObjectHit = {0.4f, 0.4f, 0.4f};
+  hitpoint.distance = distance;
+  hitpoint.hit = false;
+
+  return hitpoint;
+}
+*/

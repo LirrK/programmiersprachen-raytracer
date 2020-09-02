@@ -15,20 +15,18 @@ public:
   Sphere(glm::vec3 center, float radius)
     : center_(center), radius_(radius)
     {std::cout << "Sphere created." << std::endl;};
-  Sphere(glm::vec3 center, float radius, std::string name, Color color) : Shape(name, color)
+  Sphere(glm::vec3 center, float radius, std::string name, Color color, Material material) : Shape(name, color, material)
   {
     center_ = center;
     radius_ = radius;
     std::cout << "Sphere created." << std::endl;
   }
-  ~Sphere(){std::cout << "Sphere deleted." << std::endl;};
+  ~Sphere() {std::cout << "Sphere deleted." << std::endl;};
 
   float area() const override;
   float volume() const override;
   std::ostream& print(std::ostream& os) const override;
-  //HitPoint& intersect(Ray const& ray);
-  // warum muss der nicht nochmal in der hpp auftauchen? warum funktioniert das so?
-  // std::ostream& operator<<(std::ostream& os, Sphere const& s) override;
+  HitPoint intersect(Ray const& ray);
 
 private:
   glm::vec3 center_{0.0f, 0.0f, 0.0f};

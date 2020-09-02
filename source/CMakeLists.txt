@@ -29,3 +29,13 @@ target_link_libraries(tests
   ${GLFW_LIBRARIES}
   )
 
+# sdf_parser_sample
+add_executable(sdf_parser_sample sdf_parser_sample.cpp)
+
+target_link_libraries(sdf_parser_sample ${FRAMEWORK_NAME} ${LIBRARIES}
+  glfw
+  ${GLFW_LIBRARIES}
+  )
+add_dependencies(sdf_parser_sample glfw ${FRAMEWORK_NAME} ${COPY_BINARY})
+
+install(TARGETS sdf_parser_sample DESTINATION .)

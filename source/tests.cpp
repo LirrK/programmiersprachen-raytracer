@@ -6,7 +6,7 @@
 #include "sphere.hpp"
 #include "box.hpp"
 #include "ray.hpp"
-
+/*
 TEST_CASE("Sphere area and volume functions", "[sphereA+V]")
 {
   Sphere s0{{10.0f, 10.0f, 10.0f}, 0.0f}; // radius ist 0
@@ -42,6 +42,7 @@ TEST_CASE("Box area and volume functions", "[boxA+V]")
   REQUIRE(b3.volume() == Approx(125.0f));
   REQUIRE(b4.volume() == Approx(1.0f));
 }
+*/
 /*
 TEST_CASE("intersect_ray_sphere", "[intersect]")
 {
@@ -65,7 +66,7 @@ TEST_CASE("intersect_ray_sphere", "[intersect]")
   REQUIRE(distance == Approx(4.0f));
 }
 */
-
+/*
 TEST_CASE("Aufgabe 5.8", "[virtual]")
 {
   std::cout << std::endl;
@@ -88,7 +89,7 @@ TEST_CASE("Aufgabe 5.8", "[virtual]")
   std::cout << "ENDE AUFGABE 5.8 -----------------------" << std::endl;
   std::cout << std::endl;
 
-  /*
+  
   With virtual:
     Sphere deleted.
     Shape deleted.
@@ -105,11 +106,27 @@ TEST_CASE("Aufgabe 5.8", "[virtual]")
     Keine Ahnung warum beiden das gleiche passiert.
     Eigetlich dürfte im Fall, dass ~Shape() nicht virtuell ist, der Sphere Destruktor nicht
     aufgerufen werden. Der output müsste eigentlich 2x Shape deleted sein.
-  */
+  
 }
-
+*/
+/*
+TEST_CASE("intersect_ray_sphere", "[intersect]")
+{
+  glm::vec3 ray_origin{ 0.0f, 0.0f, 0.0f};
+  glm::vec3 ray_direction{ 0.0f, 0.0f, 1.0f};
+  glm::vec3 sphere_center{ 0.0f, 0.0f, 5.0f};
+  float sphere_radius{ 1.0f };
+  float distance = 0.0f;
+  auto result = glm::intersectRaySphere(
+    ray_origin, ray_direction, sphere_center,
+    sphere_radius * sphere_radius, distance
+  );
+  REQUIRE(distance == Approx(4.0f));
+}
+*/
 int main(int argc, char *argv[])
 {
+  /*
   Sphere sphere1{{1.0f, 1.0f, 1.0f}, 10.0f, "spherePrintedWithFunction", {0.2f, 0.3f, 0.4f}};
   Sphere sphere2{{2.0f, 2.0f, 2.0f}, 20.0f, "spherePrintedWithOperator", {0.6f, 0.7f, 0.8f}};
   Box box1{{1.0f, 1.0f, 1.0f}, {2.0f, 2.0f, 2.0f}, "boxPrintedWithFunction", {0.2f, 0.3f, 0.4f}};
@@ -124,6 +141,6 @@ int main(int argc, char *argv[])
   std::cout << box2;
     std::cout << std::endl;
 
-
+*/
   return Catch::Session().run(argc, argv);
 }
